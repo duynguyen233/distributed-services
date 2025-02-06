@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+// This protobuf is used as package name in generated Go code
+// Prevents name clashes between protocol message types that have same name
+package log.v1;
+
+option go_package = "github.com/duynguyen233/chapter2/api/log_v1";
+
+message Record {
+    bytes value = 1;
+    uint64 offset = 2;
+}
